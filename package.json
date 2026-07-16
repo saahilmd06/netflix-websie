@@ -1,0 +1,29 @@
+{
+  "name": "gonachill-clone",
+  "version": "1.0.0",
+  "description": "This is the core code from scratch to clone the landing page of Gonachill using **HTML, CSS and JavaScript.**",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Susmita-Dey/Gonachill-Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Susmita-Dey/Gonachill-Clone/issues"
+  },
+  "homepage": "https://github.com/Susmita-Dey/Gonachill-Clone#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "uuid": "^14.0.0"
+  }
+}
