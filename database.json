@@ -1,0 +1,264 @@
+{
+  "users": [
+    {
+      "id": "367a7c63-7d9b-4e2e-a10a-5614a084b753",
+      "email": "test@example.com",
+      "createdAt": "2026-05-08T06:32:38.236Z"
+    },
+    {
+      "id": "11874c1f-bc3b-4f47-9bef-4575c30e00ed",
+      "email": "ashwinashok2004@gmail.com",
+      "createdAt": "2026-05-08T06:34:52.006Z"
+    },
+    {
+      "id": "fa125237-68bc-467d-b1bc-b17e314c1013",
+      "email": "ashwinashok@gmail.com",
+      "createdAt": "2026-05-08T06:38:48.578Z"
+    },
+    {
+      "id": "7b2aa9fc-6317-4865-8fba-a68677d68f6e",
+      "email": "sahil@gmail.com",
+      "password": "$2b$10$xp54rSv7YbtWaTOr6DLlWuMFILMZ46bzlRb9TH.BPp3R6QmACOMs.",
+      "plan": "Premium",
+      "createdAt": "2026-05-09T07:15:41.811Z"
+    },
+    {
+      "id": "050748e6-8b27-4f48-9aae-49b88f222c8d",
+      "email": "saahil@gmail.com",
+      "password": "$2b$10$Yje.J5fxZnEbRwoNhPAqq.qhjLG5x7X8xv5smHCLzH71/QA90cTv6",
+      "plan": null,
+      "createdAt": "2026-05-09T07:42:19.081Z"
+    },
+    {
+      "id": "2a491866-8160-48e4-b851-197fc9fb202f",
+      "email": "zahid@gmail.com",
+      "password": "$2b$10$N10FuwgXb/NiQi/LlJJiTuipcxA2IbOMLB3QA/SerAbWmdzM4Ou.G",
+      "plan": "Premium",
+      "createdAt": "2026-05-09T07:44:40.944Z"
+    },
+    {
+      "id": "f856f9d3-f091-4211-9e29-364307777a78",
+      "email": "arjun@gmail.com",
+      "password": "$2b$10$X4y1ITXI54hXlRloVM1eFe1wM99gPshttTboDxR3FZrwAD8RcHMWy",
+      "plan": "Premium",
+      "createdAt": "2026-05-09T07:52:22.368Z"
+    },
+    {
+      "id": "5852d18c-8ef2-4f31-8905-214c6ddc565e",
+      "email": "shariff@gmail.com",
+      "password": "$2b$10$OBJRrAvoKQqQtwGwGnumd.pRBdVUzqCZS.ZLFfyngG5dKdzLAiecC",
+      "plan": "Premium",
+      "createdAt": "2026-05-11T08:15:58.502Z"
+    },
+    {
+      "id": "337146e4-67ec-480b-bc8b-7d7610a33867",
+      "email": "suraj@gmail.com",
+      "phone": "9652615245",
+      "password": "$2b$10$d6et/Yp2wqXlwdznJnjL2.a7j.1ChoRVdxHJqxT7UoHBdrr2Gtbm6",
+      "plan": "Premium",
+      "createdAt": "2026-05-16T08:50:19.610Z"
+    },
+    {
+      "id": "3a45dcc4-180c-4f6a-a548-7f5a2a048a03",
+      "email": "swetha@gmail.com",
+      "phone": "8310434192",
+      "password": "$2b$10$zCe86czjM1bDJ1kNjdoSbOu7L6.xnZt8q2h6NXzZm0QikAlhh7qCe",
+      "plan": "Premium",
+      "createdAt": "2026-05-16T08:54:00.117Z"
+    },
+    {
+      "id": "c70e3dc6-00c6-4777-8936-33855998524e",
+      "email": "qwe@gmail.com",
+      "phone": "9876543234",
+      "password": "$2b$10$5YR9ihIvRDoOfHkb8Ds04O87tGdFOgrVwQzHf1ayxxlBQOECXIIum",
+      "plan": "Premium",
+      "createdAt": "2026-05-19T09:07:39.030Z"
+    },
+    {
+      "id": "3e1f2023-cc37-4cf2-acc3-1472174cd654",
+      "email": "qaz@gmail.com",
+      "phone": "8765456787",
+      "password": "$2b$10$dE/7rRuse7sYVdFsUCpMa.KulXS0vM4dyn5Rw0OvK/LVVLLC2HgXa",
+      "plan": "Premium",
+      "createdAt": "2026-05-19T10:26:30.975Z"
+    },
+    {
+      "id": "4598b0ad-4a1f-4a3d-877b-0dfe2a4e8071",
+      "email": "amiri@gmail.com",
+      "phone": "8765432345",
+      "password": "$2b$10$L0cPMLpgKmg18JhOIYX38.IQ8ot6bupCdjjfU2/fr3G..x6jGSYOW",
+      "plan": "Premium",
+      "createdAt": "2026-05-19T12:25:05.947Z"
+    },
+    {
+      "id": "f4eba72a-391e-46db-9d30-9885d84deff4",
+      "email": "zareena@gmail.com",
+      "phone": "7876564738",
+      "password": "$2b$10$j8V8bTxMEhI/uyI5USbxzujL4x4jfZgR/0wlRthizBKqsOfx.BuSa",
+      "plan": "Premium",
+      "createdAt": "2026-05-25T12:25:53.778Z"
+    },
+    {
+      "id": "a9d0c245-1c98-441c-aebf-47594081c3a4",
+      "email": "Fayaz@gmail.com",
+      "phone": "7411052105",
+      "password": "$2b$10$MAEnrgLr90rgsQ6dK.O2uuLB0ZOhiLpQt/hkplX6gUYCOTia97C/y",
+      "plan": "Premium",
+      "createdAt": "2026-07-02T14:39:47.477Z"
+    },
+    {
+      "id": "b0106ecb-cfa3-4d27-8dd2-22b44475d973",
+      "email": "saahil123@gmail.com",
+      "phone": "7411078501",
+      "password": "$2b$10$vk2yYfrbKGNxxh.fhBg58ecBKcsMA7/FBisIBkwcLVc8/RYfzIXUO",
+      "plan": "Premium",
+      "createdAt": "2026-07-03T03:42:56.578Z"
+    },
+    {
+      "id": "38b58b5e-a2aa-416a-afae-95cb05a009a2",
+      "email": "mahaboob@gmail.com",
+      "phone": "9874254125",
+      "password": "$2b$10$C6Jxzej9UrBtj72KezM2OOCovI6tdSni7WxWtzZQcUcWqR0dEs6LK",
+      "plan": "Premium",
+      "createdAt": "2026-07-03T07:11:12.727Z"
+    },
+    {
+      "id": "4ac55a48-30ee-4455-a103-231a83df626b",
+      "email": "Saahil06@gmail.com",
+      "phone": "9856985859",
+      "password": "$2b$10$5zHk8F8YS7kWf1hOUrtay.vH.OPVSpkH0QAvw2Ycg8NUliOHScwiW",
+      "plan": "Premium",
+      "createdAt": "2026-07-07T06:06:33.285Z"
+    },
+    {
+      "id": "3b587b1c-e7b9-414f-964d-cf1c0d6cded5",
+      "email": "Saahil@gmail.com",
+      "phone": "7569468845",
+      "password": "$2b$10$AkhV.j8ZRQEhmW7jPmIfL.vpTgfLH1Xd/cb.fkyNQHJ9zL05R3QO2",
+      "plan": "Premium",
+      "createdAt": "2026-07-07T15:57:18.659Z"
+    },
+    {
+      "id": "89e92769-8f79-4b29-9932-e59786706571",
+      "email": "Saahil04@gmail.com",
+      "phone": "9900436951",
+      "password": "$2b$10$VDQ/.Et.M7fN45AM7NUBcOsGlx/24BT3ue1yGrTOXSHwhsq8hB5XW",
+      "plan": "Premium",
+      "createdAt": "2026-07-11T10:30:22.778Z"
+    }
+  ],
+  "movies": [
+    {
+      "id": "m1",
+      "title": "Baazigar",
+      "description": "Shah Rukh Khan plays a cold-blooded killer who infiltrates a wealthy family to avenge his father's betrayal.",
+      "poster": "src/assets/q1.jpg",
+      "category": "Thriller",
+      "type": "Movie"
+    },
+    {
+      "id": "m2",
+      "title": "Wanted",
+      "description": "Salman Khan is a ruthless hitman whose secret past and deadly skills make him the center of an underworld war.",
+      "poster": "src/assets/q2.jpg",
+      "category": "Action",
+      "type": "Movie"
+    },
+    {
+      "id": "m3",
+      "title": "Khalnayak",
+      "description": "A notorious gangster's escape from prison sparks a high-stakes chase and an undercover operation, leading to a complex web of loyalty and betrayal.",
+      "poster": "src/assets/khalnayak.jpg",
+      "category": "Crime",
+      "type": "Movie"
+    },
+    {
+      "id": "m4",
+      "title": "Dhoom 3",
+      "description": "Aamir Khan stars as a magician and thief who targets a corrupt bank in Chicago, pursued by Indian detectives.",
+      "poster": "src/assets/q3.jpg",
+      "category": "Thriller",
+      "type": "Movie"
+    },
+    {
+      "id": "m5",
+      "title": "Mr. and Mrs. Ramachari",
+      "description": "A blockbuster 2014 Kannada-language romantic action drama starring Yash and Radhika Pandit",
+      "poster": "src/assets/q4.jpg",
+      "category": "Romantic",
+      "type": "Movie"
+    },
+    {
+      "id": "m6",
+      "title": "Kalasipalya",
+      "description": "One of Bengaluru's oldest and most historic localities.Located in the central part of the city near KR Market",
+      "poster": "src/assets/q5.jpg",
+      "category": "Action",
+      "type": "Movie"
+    },
+    {
+      "id": "m7",
+      "title": "Leo",
+      "description": "An action-thriller starring Vijay, Sanjay Dutt, and Trisha, directed by Lokesh Kanagaraj.",
+      "poster": "src/assets/q6.jpg",
+      "category": "Action",
+      "type": "Movie"
+    },
+    {
+      "id": "m8",
+      "title": "Coolie",
+      "description": "An upcoming Indian Tamil-language action thriller film starring Rajinikanth, Aamir Khan, Nagarjuna, Shruti Haasan, and Sathyaraj, directed by Lokesh Kanagaraj.",
+      "poster": "src/assets/q7.jpg",
+      "category": "Thriller",
+      "type": "Movie"
+    },
+    {
+      "id": "m9",
+      "title": "Pushpa: The Rise - Part 1",
+      "description": "It follows the meteoric rise of Pushpa Raj,a fearless daily wage laborer,as he navigates and eventually dominates a ruthless,illegal red sandalwood smuggling syndicate operating in the Seshachalam forests of Andhra Pradesh.",
+      "poster": "src/assets/q8.jpg",
+      "category": "Thriller",
+      "type": "Movie"
+    },
+    {
+      "id": "m10",
+      "title": "Antim: The Final Truth",
+      "description": "That explores the tragic cycle of farmer exploitation and organized crime.",
+      "poster": "src/assets/q9.jpg",
+      "category": "Crime",
+      "type": "Movie"
+    },
+    {
+      "id": "m11",
+      "title": "Criminal",
+      "description": "The starring Nagarjuna,Manisha Koirala and Ramya Krishnan.It is famously an Indian adaptation of the Hollywood classic The Fugitive.",
+      "poster": "src/assets/q10.jpg",
+      "category": "Crime",
+      "type": "Movie"
+    },
+    {
+      "id": "m12",
+      "title": "Dhurandhar",
+      "description": "An elite undercover operative infiltrates Karachi's dangerous criminal syndicates to dismantle a powerful ISI-underworld nexus from within.",
+      "poster": "src/assets/q11.jpg",
+      "category": "Trending",
+      "type": "Movie"
+    },
+    {
+      "id": "m13",
+      "title": "KD: The Devil",
+      "description": "The story follows Kaali (Dhruva Sarja),a good-natured yet petty criminal whose life spirals out of control when he inadvertently gets involved with powerful underworld syndicates and struggles to navigate the unforgiving criminal hierarchy.",
+      "poster": "src/assets/q12.jpg",
+      "category": "Trending",
+      "type": "Movie"
+    },
+    {
+      "id": "m14",
+      "title": "Dacoit: A Love Story",
+      "description": "It follows Hari (Sesh) and Saraswati/Juliet (Thakur),who reunite after a 13-year separation to pull off a dangerous robbery,blurring the lines between their past love and betrayal.",
+      "poster": "src/assets/q13.jpg",
+      "category": "Trending",
+      "type": "Movie"
+    }
+  ]
+}
