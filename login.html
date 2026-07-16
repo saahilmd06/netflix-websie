@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gonachill - Sign In</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar__brand">
+                <a href="index.html">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 90'%3E%3Cdefs%3E%3Cpath id='a' d='M20,58 C90,26 230,26 300,58'/%3E%3C/defs%3E%3Ctext font-family='Arial,sans-serif' font-weight='800' font-size='40' fill='%23e50914' letter-spacing='-1'%3E%3CtextPath href='%23a' startOffset='50%25' text-anchor='middle'%3EGONACHILL%3C/textPath%3E%3C/text%3E%3C/svg%3E"
+                        alt="Gonachill logo" class="brand__logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <h2>Sign In</h2>
+            <form id="loginForm" class="auth-form">
+                <input type="email" id="email" placeholder="Email address" minlength="8">
+                <input type="tel" id="phone" placeholder="Phone number" pattern="[0-9]{10}"
+                    title="Please enter a 10-digit phone number">
+                <input type="password" id="password" placeholder="Password" required minlength="8" maxlength="8">
+                <div style="display: flex; gap: 10px; margin-top: 24px;">
+                    <button type="submit" class="primary__button" style="flex: 1; margin-top: 0;">Sign In</button>
+                    <button type="button" id="otpBtn" class="primary__button"
+                        style="flex: 1; margin-top: 0; background-color: rgba(128, 128, 128, 0.4); border: 1px solid #555;">Get
+                        OTP</button>
+                </div>
+            </form>
+            <div id="errorMessage" style="color: #e87c03; margin-top: 15px; font-size: 14px; display: none;"></div>
+
+            <div style="margin-top: 15px; text-align: center;">
+                <a href="forgot-password.html" style="color: #b3b3b3; text-decoration: none; font-size: 13px;">Forgot
+                    password?</a>
+            </div>
+
+            <div class="auth-footer">
+                New to Gonachill? <a href="signup.html">Sign up now.</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="src/auth.js"></script>
+    <script>
+        // Phone Number Limit Logic
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', (e) => {
+                let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+                if (value.length > 10) {
+                    value = value.slice(0, 10);
+                }
+                e.target.value = value;
+            });
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('errorMessage');
+
+            if (!email && !phone) {
+                errorDiv.textContent = "Please enter either an email or a phone number.";
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            try {
+                const result = await auth.login(email, password, phone);
+                console.log('Login successful:', result);
+
+                // If user has a plan, go to browse, otherwise go to subscription
+                if (result.user.plan) {
+                    window.location.href = 'browse.html';
+                } else {
+                    window.location.href = 'subscription.html';
+                }
+            } catch (err) {
+                errorDiv.textContent = err.message;
+                errorDiv.style.display = 'block';
+            }
+        });
+
+        // Get OTP Logic
+        const otpBtn = document.getElementById('otpBtn');
+        if (otpBtn) {
+            otpBtn.addEventListener('click', (e) => {
+                e.preventDefault(); // Just in case
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const errorDiv = document.getElementById('errorMessage');
+
+                if (!email && !phone) {
+                    errorDiv.textContent = "Please enter either an email address or a phone number to get OTP.";
+                    errorDiv.style.color = "#e87c03";
+                    errorDiv.style.display = 'block';
+                    errorDiv.style.visibility = 'visible'; // Ensure visibility
+                    console.log('OTP Error shown');
+                    return;
+                }
+
+                errorDiv.textContent = "OTP sent to your registered mobile/email (simulated)!";
+                errorDiv.style.color = "#00ff00";
+                errorDiv.style.display = 'block';
+                errorDiv.style.visibility = 'visible';
+                console.log('OTP Success shown');
+            });
+        }
+    </script>
+</body>
+
+</html>
