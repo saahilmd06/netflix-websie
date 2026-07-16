@@ -1,1 +1,1 @@
-# netflix-websie project
+# netflix-website project
