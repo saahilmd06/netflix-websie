@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="description" content="Hello this is my first web page!." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <title>Gonachill India - Watch TV Shows Online, Watch Movies Online</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23000000'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' fill='%23e50914'%3EG%3C/text%3E%3C/svg%3E" />
+</head>
+
+<body>
+  <div id="intro-container">
+    <div class="gonachill-intro">
+      <div class="gonachill-logo-wrapper">
+        <h1 class="gonachill-text">GONACHILL</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verification Overlay -->
+  <div id="verification-container" class="verification-overlay" style="display: none;">
+    <div class="verification-modal">
+        <h2>Age Verification Required</h2>
+        <p>Please verify your details to continue to Gonachill.</p>
+        <div id="verification-error" class="verification-error" style="display: none;"></div>
+        <form id="verificationForm">
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="docType">Select Document for Verification</label>
+                <select id="docType" required onchange="updateDocInput()">
+                    <option value="">Choose a document...</option>
+                    <option value="aadhar">Aadhar Card</option>
+                    <option value="pan">PAN Card</option>
+                </select>
+            </div>
+            <div class="form-group" id="docInputGroup" style="display: none;">
+                <label id="docLabel" for="docNumber">Document Number</label>
+                <input type="text" id="docNumber" required>
+            </div>
+            <button type="submit" class="verify-btn">Verify & Continue</button>
+        </form>
+    </div>
+  </div>
+  <header>
+    <nav class="navbar">
+      <div class="navbar__brand">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 90'%3E%3Cdefs%3E%3Cpath id='a' d='M20,58 C90,26 230,26 300,58'/%3E%3C/defs%3E%3Ctext font-family='Arial,sans-serif' font-weight='800' font-size='40' fill='%23e50914' letter-spacing='-1'%3E%3CtextPath href='%23a' startOffset='50%25' text-anchor='middle'%3EGONACHILL%3C/textPath%3E%3C/text%3E%3C/svg%3E" alt="Gonachill logo" class="brand__logo" />
+      </div>
+
+      <div class="navbar__nav__items">
+        <div class="nav__item">
+          <div class="dropdown__container">
+            <i class="fas fa-globe"></i>
+            <select name="languages" id="languagesSelect" class="language__drop__down">
+              <option value="english" selected style="color: white;">English</option>
+              <option value="hindi" style="color: white;">हिन्दी</option>
+              <option value="kannada" style="color: white;">ಕನ್ನಡ</option>
+              <option value="telugu" style="color: white;">తెలుగు</option>
+              <option value="tamil" style="color: white;">தமிழ்</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="nav__item" id="navAuthSection">
+          <a href="login.html" class="signin__button" style="text-decoration: none;" data-i18n="signIn">
+            Sign in
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__bg__image__container">
+        <img
+          src="https://assets.nflxext.com/ffe/siteui/vlv3/9c5457b8-9ab0-4a04-9fc1-e608d5670f1a/710d74e0-7158-408e-8d9b-23c219dee5df/IN-en-20210719-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+          alt="BG hero image" class="hero__bg__image" />
+      </div>
+      <div class="hero__bg__overlay"></div>
+
+      <div class="hero__card">
+        <h1 class="hero__title" data-i18n="heroTitle">
+          Unlimited Movies TV,<br />
+          Shows and More.
+        </h1>
+        <p class="hero__subtitle" data-i18n="heroSubtitle">Watch anywhere and cancel anytime.</p>
+        <p class="hero__description" data-i18n="heroDescription">
+          Ready to watch? Enter your email to create or restart your
+          membership .
+        </p>
+
+        <div class="email__form__container">
+          <div class="form__container">
+            <input type="email" id="email-input-1" class="email__input" placeholder=" " />
+            <label class="email__label" data-i18n="emailLabel">Email Address</label>
+          </div>
+          <button id="btn-get-started-1" class="primary__button" data-i18n="getStarted">
+            Get Started <i class="fal fa-chevron-right"></i>
+          </button>
+        </div>
+        <div id="message-1" style="margin-top: 10px; font-weight: bold; color: #00ff00;"></div>
+      </div>
+    </section>
+    <section class="features__container">
+      <!-- Feature 1 -->
+      <div class="feature">
+        <div class="feature__details">
+          <h3 class="feature__title" data-i18n="feature1Title">Enjoy on your TV.</h3>
+          <h5 class="feature__sub__title" data-i18n="feature1SubTitle">
+            Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+            Blu-ray players and more.
+          </h5>
+        </div>
+        <div class="feature__image__container">
+          <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="Feature image"
+            class="feature__image" />
+          <div class="feature__backgroud__video__container">
+            <video autoplay="" loop="" muted="" class="feature__backgroud__video">
+              <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+      <!-- Feature 2 -->
+      <div class="feature">
+        <div class="feature__details">
+          <h3 class="feature__title" data-i18n="feature2Title">
+            Download your shows to watch offline.
+          </h3>
+          <h5 class="feature__sub__title" data-i18n="feature2SubTitle">
+            Save your favourites easily and always have something to watch.
+          </h5>
+        </div>
+        <div class="feature__image__container">
+          <img src="src/assets/khalnayak.jpg" alt="Khalnayak" class="feature__image" />
+          <div class="feature__2__poster__container">
+            <div class="poster__container">
+              <img src="src/assets/khalnayak.jpg" alt="poster" class="poster">
+            </div>
+            <div class="poster__details">
+              <h4>Khalnayak</h4>
+              <h6>Downloading...</h6>
+            </div>
+            <div class="download__gif__container">
+              <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"
+                alt="downloading gif" class="gif" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="feature">
+        <div class="feature__details">
+          <h3 class="feature__title" data-i18n="feature3Title">Watch everywhere.</h3>
+          <h5 class="feature__sub__title" data-i18n="feature3SubTitle">
+            Stream unlimited movies and TV shows on your phone, tablet,
+            laptop, and TV.
+          </h5>
+        </div>
+        <div class="feature__image__container feature__3__image__container">
+          <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"
+            alt="Feature image" class="feature__image feature__3__image" />
+          <div class="feature__backgroud__video__container feature__3__backgroud__video__container">
+            <video autoplay="" loop="" muted="" class="feature__backgroud__video feature__3__backgroud__video">
+              <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="FAQ__list__container">
+      <h1 class="FAQ__heading" data-i18n="faqHeading">Frequently Asked Questions</h1>
+      <div class="FAQ__list">
+        <div class="FAQ__accordian">
+          <button class="FAQ__title">
+            <span data-i18n="faq1">What is Gonachill?</span><i class="fal fa-plus"></i>
+          </button>
+          <div class="FAQ__visible">
+            <p data-i18n="faq1Ans1">
+              Gonachill is a streaming service that offers a wide variety of
+              award-winning TV shows, movies, anime, documentaries and more –
+              on thousands of internet-connected devices.
+            </p>
+            <p data-i18n="faq1Ans2">
+              You can watch as much as you want, whenever you want, without a
+              single ad – all for one low monthly price. There's always
+              something new to discover, and new TV shows and movies are added
+              every week!
+            </p>
+          </div>
+        </div>
+        <div class="FAQ__accordian">
+          <button class="FAQ__title">
+            <span data-i18n="faq2">How much does gonachill cost?</span><i class="fal fa-plus"></i>
+          </button>
+          <div class="FAQ__visible">
+            <p data-i18n="faq2Ans">
+              Watch Gonachill on your smartphone, tablet, Smart TV, laptop, or
+              streaming device, all for one fixed monthly fee. Plans range
+              from ₹ 199 to ₹ 799 a month. No extra costs, no contracts.
+            </p>
+          </div>
+        </div>
+        <div class="FAQ__accordian">
+          <button class="FAQ__title">
+            <span data-i18n="faq3">Where can i watch?</span><i class="fal fa-plus"></i>
+          </button>
+          <div class="FAQ__visible">
+            <p data-i18n="faq3Ans1">
+              Watch anywhere, anytime, on an unlimited number of devices. Sign
+              in with your Gonachill account to watch instantly on the web at
+              gonachill.com from your personal computer or on any
+              internet-connected device that offers the Gonachill app, including
+              smart TVs, smartphones, tablets, streaming media players and
+              game consoles.
+            </p>
+            <p data-i18n="faq3Ans2">
+              You can also download your favourite shows with the iOS,
+              Android, or Windows 10 app. Use downloads to watch while you're
+              on the go and without an internet connection. Take Gonachill with
+              you anywhere.
+            </p>
+          </div>
+        </div>
+        <div class="FAQ__accordian">
+          <button class="FAQ__title">
+            <span data-i18n="faq4">How do I cancel?</span><i class="fal fa-plus"></i>
+          </button>
+          <div class="FAQ__visible">
+            <p data-i18n="faq4Ans">
+              Gonachill is flexible. There are no annoying contracts and no
+              commitments. You can easily cancel your account online in two
+              clicks. There are no cancellation fees – start or stop your
+              account anytime.
+            </p>
+          </div>
+        </div>
+        <div class="FAQ__accordian">
+          <button class="FAQ__title">
+            <span data-i18n="faq5">What can I watch from Gonachill?</span><i class="fal fa-plus"></i>
+          </button>
+          <div class="FAQ__visible">
+            <p data-i18n="faq5Ans">
+              Gonachill has an extensive library of feature films,
+              documentaries, TV shows, anime, award-winning Gonachill originals,
+              and more. Watch as much as you want, anytime you want.
+            </p>
+          </div>
+        </div>
+        <div class="FAQ__accordian">
+          <button class="FAQ__title">
+            <span data-i18n="faq6">Is Gonachill good for kids?</span><i class="fal fa-plus"></i>
+          </button>
+          <div class="FAQ__visible">
+            <p data-i18n="faq6Ans1">
+              The Gonachill Kids experience is included in your membership to
+              give parents control while kids enjoy family-friendly TV shows
+              and films in their own space.
+            </p>
+            <p data-i18n="faq6Ans2">
+              Kids profiles come with PIN-protected parental controls that let
+              you restrict the maturity rating of content kids can watch and
+              block specific titles you don’t want kids to see.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="FAQ__get__started__email">
+        <h3 data-i18n="readyToWatch">
+          Ready to watch? Enter your email to create or restart your
+          membership.
+        </h3>
+        <div class="email__form__container">
+          <div class="form__container">
+            <input type="email" id="email-input-2" class="email__input" placeholder=" " />
+            <label class="email__label" data-i18n="emailLabel">Email Address</label>
+          </div>
+          <button id="btn-get-started-2" class="primary__button" data-i18n="getStarted">
+            Get Started <i class="fal fa-chevron-right"></i>
+          </button>
+        </div>
+        <div id="message-2" style="margin-top: 10px; font-weight: bold; color: #00ff00;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer__row__1">
+      <h4 data-i18n="questionsCall">Questions? Call 000-800-040-1843</h4>
+    </div>
+    <div class="footer__row__2">
+      <div class="column__1">
+        <p>FAQ</p>
+        <p>Investor Relations</p>
+        <p>Privacy</p>
+        <p>Speed Test</p>
+      </div>
+      <div class="column__2">
+        <p>Help Centre</p>
+        <p>Jobs</p>
+        <p>Cookie Preferences</p>
+        <p>Legal Notices</p>
+      </div>
+      <div class="column__3">
+        <p>Account</p>
+        <p>Ways to Watch</p>
+        <p>Corporate Information</p>
+        <p>Only on Gonachill</p>
+      </div>
+      <div class="column__4">
+        <p>Media Centre</p>
+        <p>Terms of Use</p>
+        <p>Contact Us</p>
+      </div>
+    </div>
+
+    <div class="footer__row__3">
+      <div class="dropdown__container">
+        <i class="fas fa-globe"></i>
+        <select name="languages" id="languagesSelectFooter" class="language__drop__down">
+          <option value="english" selected>English</option>
+          <option value="hindi">हिन्दी</option>
+          <option value="kannada">ಕನ್ನಡ</option>
+          <option value="telugu">తెలుగు</option>
+          <option value="tamil">தமிழ்</option>
+        </select>
+      </div>
+    </div>
+    <div class="footer__row__4">
+      <p data-i18n="gonachillIndia">Gonachill India</p>
+    </div>
+  </footer>
+
+  <script src="src/auth.js"></script>
+  <script src="src/index.js"></script>
+  <script>
+    // Handle Login State in Navbar
+    const user = auth.getUser();
+    if (user) {
+      const navAuthSection = document.getElementById('navAuthSection');
+      navAuthSection.innerHTML = `
+                <div class="user-profile">
+                    <div class="profile-icon">${user.email[0].toUpperCase()}</div>
+                    <div class="profile-dropdown">
+                        <span>${user.email}</span>
+                        <a href="browse.html">Browse</a>
+                        <a href="subscription.html">Account</a>
+                        <button onclick="auth.logout()">Sign Out</button>
+                    </div>
+                </div>
+            `;
+    }
+  </script>
+</body>
+
+</html>
